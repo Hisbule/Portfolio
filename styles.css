@@ -152,22 +152,26 @@ body {
         text-align: center; /* Center everything for mobile */
     }
 
-    .left-section, .right-section {
+        .left-section, .right-section {
         padding: 0;
         width: 100%;
+        width: calc(100% - 30px); /* Subtracting 15px on each side */
         text-align: center; /* Center text in both sections */
     }
 
     .heading {
-        font-size: 2.5rem;
+        font-size: 35px;
         text-align: center;
         margin-top: 30px; /* Push heading a little down */
+        font-weight: 600;
     }
 
     .sub-heading {
-        font-size: 18px;
+        font-size: 14px;
         max-width: 100%;
-        text-align: center;
+        text-align: justify;
+        font-weight: 300;
+        line-height: 22px;
         margin-bottom: 20px; /* Add more space between sub-heading */
     }
 
