@@ -1,0 +1,110 @@
+/* About section with transparent background */
+.about-section {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Set background to transparent */
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* About image and social icons */
+.about-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transform: translateX(-50px); /* Shift the image a bit to the right */
+}
+
+.about-image-container {
+    position: relative;
+}
+
+.about-profile-img {
+    width: 400px; /* Increased width */
+    height: 400px; /* Increased height */
+    border-radius: 50%;
+    border: 5px solid #f7f5f5;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+/* Social icons below the profile image in a circular arrangement */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: -50px; /* Move the icons below the image */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Right section for the "About Me" text */
+.about-right {
+    flex: 2;
+    padding-left: 60px; /* Shift the text more to the right */
+    text-align: left;
+}
+
+.about-right h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.about-right p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-right {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .about-profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .social-icons {
+        bottom: -40px; /* Adjust icon position for smaller screens */
+    }
+
+    .about-right p {
+        font-size: 1.2rem;
+    }
+}
