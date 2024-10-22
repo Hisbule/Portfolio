@@ -89,3 +89,17 @@
         glow.style.top = `${50 + (scrollPosition / windowHeight) * 50}%`; // Adjust vertical position
         glow.style.left = `50%`; // Keep it centered horizontally
     });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+  
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+  
+          window.scrollTo({
+              top: targetSection.offsetTop,  // Scroll to the section's top position
+              behavior: 'smooth'  // Enables smooth scrolling
+          });
+      });
+  });
+  
